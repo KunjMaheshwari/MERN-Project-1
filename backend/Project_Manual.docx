@@ -1,0 +1,8 @@
+1. Create a project folder
+2. Inside that create a backend folder
+3. In the terminal move to backend by using the command cd backend
+4. After that, create a package.json file by using the command npm init -y
+5. Create a file called index.js
+6. Install the necessary modules using the command npm install nodemon express mongoose
+7. Modification in package.json file -> "start":"nodemon index.js"
+
