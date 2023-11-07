@@ -1,4 +1,5 @@
 import Axios from "axios";
+import {Link} from "react-router-dom";
 
 function StudentListRow(props) {
     const {_id, name, email, rollNo} = props.obj; // Object destruction
@@ -7,7 +8,7 @@ function StudentListRow(props) {
         .then((res)=>{
             if(res.send === 200){
                 alert("Record deleted successfully");
-                window.localtion.reload();  
+                window.location.reload(); 
             }else
                 Promise.reject();
         })
@@ -21,7 +22,7 @@ function StudentListRow(props) {
             <td>{rollNo}</td>
             <td>
                 <button class="btn btn-success">
-                    Edit
+                    <Link class="text-decoration-none text-light" to={"/edit-student/"+ _id}>Edit</Link>
                 </button>
                 <button onClick={handleClick} class="btn btn-danger">
                     Delete
