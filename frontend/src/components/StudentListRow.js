@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 function StudentListRow(props) {
     const {_id, name, email, rollNo} = props.obj; // Object destruction
     const handleClick = () => {
-        Axios.delete("http://localhost:4000/studentRoute/delete-student/" + _id)
+        Axios.delete("https://backend-file-of-mern-stack-project-1.onrender.com/studentRoute/delete-student/" + _id)
         .then((res)=>{
             if(res.send === 200){
                 alert("Record deleted successfully");
