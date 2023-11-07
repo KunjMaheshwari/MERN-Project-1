@@ -6,7 +6,7 @@ import StudentListRow from "./StudentListRow";
 function StudentList(){
     const [arr, setArr] = useState([]);
     useEffect(()=>{
-        Axios.get("http://localhost:4000/studentRoute/")
+        Axios.get("https://backend-file-of-mern-stack-project-1.onrender.com/studentRoute/")
         .then((res)=>{
             if(res.status === 200)
                 setArr(res.data);
